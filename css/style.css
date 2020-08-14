@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  background: linear-gradient(rgb(201, 242, 242), rgb(201, 209, 242), rgb(232, 201, 242));
+  background-size: auto;
+	background-repeat: no-repeat; 
+	background-attachment:  fixed;  
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: rgb(10, 125, 163);
+  position: fixed;
+  width: 100vw; /*ocupa 100% da largura da tela*/
+  top: 0; /*só funciona se um position estiver declarado, colocou a barra nav para cima da tela*/
+  z-index: 1; /*muda a prioridade do eixo z, não deixando as animações se sobreporem no site*/
+}
+
+.menu ul {
+  display: flex; 
+  justify-content: space-around; 
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block; /*utilizado para aumentar a area de clique do link sem que o padding extravaze para fora*/
+  padding: 1.5em;
+  transition: background-color 1s, color 1s; /* sempre que usar propriedades de hover é bom especificar uma transition para o efeito*/
+}
+.menu a:hover {
+  background-color: rgb(201, 242, 242);
+  color: black;    
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+  
+.site-title,
+.site-subtitle {
+  text-align: center;
+  color: black;
+}
+
+.site-title {
+  font-size: 3.5em; /*3,5 vezes o tamanho do body*/
+	font-family: 'Caveat Brush', cursive;
+	margin-bottom: 0.3em;
+}
+
+.site-subtitle {
+	font-style: italic;
+	font-size: 1.8em;
+}
+
+.sobre,
+.serviços,
+.dicas,
+.contatos {
+	margin: 2em;
+	min-height: 100vh;
+}
+
+.sobre h2,
+.serviços h2,
+.dicas h2,
+.contatos h2 {
+	text-align: center;
+	margin-bottom: 3.5em;
+	font-size: 1.8em;
+	font-family: 'Sedgwick Ave', cursive;
+	text-transform: uppercase;
+}
+
+.sobre .img-sobre img { 
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	margin: 2.5em;
+	float: right;
+}
+
+.sobre p {
+	color: black;
+	font-size: 1.2em;
+	text-align: justify;
+	line-height: 2em;
+	margin-top: 1em;
+}
+
+/*quando o site for exibido numa tela de no minimo 1200px de largura, serão aplicadas as propriedades abaixo*/
+@media (min-width:1200px) {
+	.container,
+	.dicas {
+    max-width: 1200px;
+    margin-left: auto;/* estas duas propriedades de margem servem para alinhar as informações no centro da tela, importante em telas grandes*/
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+	.sobre .img-sobre img { 
+		border-radius: 50%;
+		width: 250px;
+		height: 250px;
+		margin: 2.5em;
+	}
+
+	.sobre h2 {
+		margin: 1em;
+	}
+}
+
+.serviços-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.serviços-container h3 {
+	margin-top: 4em;
+}
+
+.serviços-container h3:hover {
+	color: white;
+	transition: 0.5s;
+}
+
+@media(max-width: 600px) {
+	.serviços-container {
+		display: block;
+		text-align: center;
+	}
+}
+
+.redes-sociais {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+
+.redes-sociais h3 {
+	margin-top: 1em;
+	color: rgb(10, 125, 163);
+}
+
+
+
+
+
+
