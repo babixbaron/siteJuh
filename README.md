@@ -1,3 +1,3 @@
-# site-juh
+# Página pessoal Juh Fernandes
 
-Página pessoal em desenvolvimento.
+Projeto pessoal feito para assimilar alguns conteúdos iniciais de html, css e javascript.
